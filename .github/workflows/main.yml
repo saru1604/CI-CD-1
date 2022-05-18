@@ -17,17 +17,26 @@ on:
 jobs:
   build-and-deploy:
     runs-on: windows-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/checkout@v1
-      - name: Setup Working Directory
-        working-directory: C:\inetpub\
-        run: cp C:\inetpub\* C:\inetpub\wwwroot\
-    # Install IIS
-      - name: Build
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+    
+    # Checking IIS
+      - name: Check for the IIS
         run: |
           Get-ItemProperty -Path registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\InetStp\ | Select-Object
-          cd C:\inetpub\
+          cd C:\inetpub\wwwroot\
           ls
+    
+    # Deploying the Data
+      - name: Deployment Step
+        uses: hirenrparghi/CI-CD@v4
+        with:
+          branch: main
+          repository-name: CI-CD
+          target folder: C:\inetpub\wwwroot\
 
 
       
