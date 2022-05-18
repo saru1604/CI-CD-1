@@ -21,6 +21,7 @@ jobs:
       - uses: actions/checkout@v1
       - name: Setup Working Directory
         working-directory: C:\inetpub\
+        run: cp C:\inetpub\* C:\inetpub\wwwroot\
     # Install IIS
       - name: Build
         run: |
