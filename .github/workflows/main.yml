@@ -18,8 +18,11 @@ jobs:
   build-and-deploy:
     runs-on: windows-latest
     steps:
+       - uses: actions/checkout@v1
+       - name: Setup and Run test
+         working-directory: C:
     
-    # Install IIS
+    # Check for IIS
     - name: Build
       run: |
         C:
