@@ -21,6 +21,9 @@ jobs:
     
     # Install IIS
     - name: Build
-      run: ls
+      run: |
+        C:
+        cd
+        
 
       
