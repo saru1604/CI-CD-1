@@ -19,12 +19,13 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v1
+        working-directory: C:\inetpub\
     # Install IIS
       - name: Build
         run: |
-          C:
-          ls
           Get-ItemProperty -Path registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\InetStp\ | Select-Object
+          cd C:\inetpub\
+          ls
 
 
       
