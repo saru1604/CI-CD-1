@@ -30,13 +30,6 @@ jobs:
           cd C:\inetpub\wwwroot\
           ls
     
-    # Deploying the Data
-      - name: Deployment Step
-        uses: hirenrparghi/CI-CD@v1
-        with:
-          branch: main
-          repository-name: CI-CD
-          target folder: C:\inetpub\wwwroot\
-
+   
 
       
