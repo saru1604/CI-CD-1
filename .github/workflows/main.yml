@@ -15,9 +15,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains multiple jobs
-  build_test:
-    name: Build & Test App
+
     # The type of runner that the job will run on
     runs-on: windows
 
