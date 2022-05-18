@@ -32,7 +32,7 @@ jobs:
     
     # Deploying the Data
       - name: Deployment Step
-        uses: hirenrparghi/CI-CD@v4
+        uses: hirenrparghi/CI-CD@v1
         with:
           branch: main
           repository-name: CI-CD
