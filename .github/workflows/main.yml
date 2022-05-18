@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v1
     # Install IIS
       - name: Build
-         run: |
+        run: |
           C:
           ls
           Get-ItemProperty -Path registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\InetStp\ | Select-Object
