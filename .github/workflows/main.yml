@@ -19,6 +19,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v1
+      - name: Setup Working Directory
         working-directory: C:\inetpub\
     # Install IIS
       - name: Build
