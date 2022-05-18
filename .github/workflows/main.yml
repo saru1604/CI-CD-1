@@ -23,7 +23,7 @@ jobs:
     - name: Build
       run: |
         C:
-        cd
-        
+        ls
+
 
       
