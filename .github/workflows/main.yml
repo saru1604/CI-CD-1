@@ -17,9 +17,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: windows-latest
-    steps:
-       - uses: actions/checkout@v1
-       - name: Setup and Run test
+    defaults:
+       run:
          working-directory: c:\inetpub\
     
     # Check for IIS
