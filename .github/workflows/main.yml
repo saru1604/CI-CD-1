@@ -23,6 +23,7 @@ jobs:
 
       # Install IIS
       - name: Build
+        if: always()
         shell: pwsh
         run: ls
 
