@@ -17,17 +17,14 @@ on:
 jobs:
   build-and-deploy:
     runs-on: windows-latest
-    defaults:
-       run:
-         working-directory: c:\inetpub\
-    
-    # Check for IIS
-    - name: Build
-      run: |
-        C:
-        Get-ItemProperty -Path registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\InetStp\ | Select-Object
-        cd c:\inetpub\wwwroot\
-        ls
+    steps:
+      - uses: actions/checkout@v1
+    # Install IIS
+      - name: Build
+         run: |
+          C:
+          ls
+          Get-ItemProperty -Path registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\InetStp\ | Select-Object
 
 
       
