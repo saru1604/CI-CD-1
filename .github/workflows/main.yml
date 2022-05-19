@@ -16,17 +16,18 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build-and-deploy:
+    name: Build and Deploy
     runs-on: windows-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository underr $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      - name: Setup and run
-        shell: pwsh
-        working-directory: C:\inetpub\wwwroot
-        run: |
+    - uses: actions/checkout@main
+    - name: Setup and run
+      run: |
           .\test.ps1
+      working-directory: C:\inetpub\
+        
           
     
    
