@@ -10,6 +10,8 @@ on:
   pull_request:
     branches: [ main ]
 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -18,11 +20,13 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-
-      # Checks-out your repository underr $GITHUB_WORKSPACE, so your job can access itt
+      # Checks-out your repository underr $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
       - name: Setup and run
-        working-directory: ./web
-        run: echo "Hello"
+        shell: pwsh
+        working-directory: C:\inetpub\wwwroot
+        run: |
+          .\test.ps1
           
     
    
