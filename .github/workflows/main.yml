@@ -16,14 +16,14 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
 
-  Build Part:
+  BuildPart:
     name: Build and Deploy
     runs-on: windows-latest
     steps:
         - uses: hirenrparghi/CI-CD@main
         - run: echo "Hello"
 
-  Deploy part:  
+  DeployPart:  
     name: Setup and run
     runs-on: windows-latest
     steps:
