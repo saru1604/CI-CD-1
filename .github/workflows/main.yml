@@ -33,7 +33,7 @@ jobs:
           Get-ItemProperty -Path registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\InetStp\ | Select-Object
           cd C:\inetpub\wwwroot\
           ls
-          mv C:\inetpub\* C:\inetpub\wwwroot\*
+          mv C:\inetpub\ C:\inetpub\wwwroot\
     
    
 
