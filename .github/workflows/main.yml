@@ -24,6 +24,7 @@ jobs:
       # Checks-out your repository underr $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@main
     - name: Setup and run
+      shell: pwsh
       run: |
         .\test.ps1
       working-directory: C:\inetpub\
