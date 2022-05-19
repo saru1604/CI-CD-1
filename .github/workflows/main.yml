@@ -30,7 +30,6 @@ jobs:
     # Checking IIS
       - name: Check for the IIS
         run: |
-          Get-ItemProperty -Path registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\InetStp\ | Select-Object
           cd C:\inetpub
           ls
           
