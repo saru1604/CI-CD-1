@@ -19,10 +19,16 @@ jobs:
   Build Part:
     name: Build and Deploy
     runs-on: windows-latest
+    steps:
+        - uses: hirenrparghi/CI-CD@main
+        - run: echo "Hello"
 
   Deploy part:  
     name: Setup and run
-    run: |
-      .\test.ps1
+    runs-on: windows-latest
+    steps:
+        - uses: hirenrparghi/CI-CD@main
+        - run: |
+            .\test.ps1
      
           
