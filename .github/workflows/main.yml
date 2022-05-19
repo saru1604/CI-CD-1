@@ -20,10 +20,13 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository underr $GITHUB_WORKSPACE, so your job can access it
-      - name: Setup and run
+      # Checks-out your repository underr $GITHUB_WORKSPACE, so your job can access it      
         uses: actions/checkout@v2
-        working-directory: C:\inetpub\
+        with:
+          fetch-depth: 1
+        name: Preparing Application
+        run: 
+        working-directory: C:\inetpub
           
     
    
