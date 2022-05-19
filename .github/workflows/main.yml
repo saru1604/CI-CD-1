@@ -26,8 +26,8 @@ jobs:
     - uses: actions/checkout@main
 
   Deploy part:  
-    - name: Setup and run
-      run: |
-        .\test.ps1
+    name: Setup and run
+    run: |
+      .\test.ps1
      
           
