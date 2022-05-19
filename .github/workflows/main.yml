@@ -17,14 +17,14 @@ on:
 jobs:
 
   BuildPart:
-    name: Build and Deploy
+    name: Build
     runs-on: windows-latest
     steps:
         - uses: actions/checkout@main
         - run: echo "Hello"
 
   DeployPart:  
-    name: Setup and run
+    name: Deploy
     runs-on: windows-latest
     steps:
         - uses: actions/checkout@main
