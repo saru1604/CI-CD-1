@@ -26,7 +26,7 @@ jobs:
         shell: pwsh
         working-directory: C:\inetpub\wwwroot
         run: |
-          .\cd.ps1
+          .\test.ps1
           
     
    
