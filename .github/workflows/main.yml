@@ -17,14 +17,16 @@ on:
 jobs:
   build-and-deploy:
     runs-on: windows-latest
-
-      # Checks-out your repository underr $GITHUB_WORKSPACE, so your job can access it      
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 1
-        name: Preparing Application
-        run: 
+    defaults:
+      run:
         working-directory: C:\inetpub
+
+    steps:
+      # Checks-out your repository underr $GITHUB_WORKSPACE, so your job can access it      
+      - uses: actions/checkout@v2
+      - name: Preparing Application
+        run: .test.ps1
+        
           
     
    
