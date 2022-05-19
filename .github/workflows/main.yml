@@ -21,12 +21,10 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository underr $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
       - name: Setup and run
-        shell: pwsh
-        working-directory: C:\inetpub\wwwroot
-        run: |
-          test.ps1
+        uses: actions/checkout@v2
+      - run: |
+          ./test.ps1
           
     
    
