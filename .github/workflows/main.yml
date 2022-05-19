@@ -22,8 +22,7 @@ jobs:
       # Checks-out your repository underr $GITHUB_WORKSPACE, so your job can access itt
       - name: Setup and run
         working-directory: ./web
-        run: |
-          ./test.ps1
+        run: echo "Hello"
           
     
    
