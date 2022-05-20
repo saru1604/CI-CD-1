@@ -29,6 +29,7 @@ jobs:
     steps:
         - uses: actions/checkout@main
         - run: |
+            echo pwd
             .\test.ps1
      
           
