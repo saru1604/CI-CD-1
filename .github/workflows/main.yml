@@ -21,7 +21,7 @@ jobs:
     runs-on: windows-latest
     steps:
         - uses: actions/checkout@main
-        - run: echo "Hello"
+        - run: echo $pwd
 
   DeployPart:  
     name: Deploy
